@@ -2,11 +2,11 @@
 
 int shellsort(int arr[], int n);
 
-int main() { // 10개 데이터를 쉘 정렬하는 법을 말해보자.
+int main() { 
 	int arr[] = { 1, 9, 15, 12, 3, 7, 5, 8, 11, 2 };
 	int n = sizeof(arr) / sizeof(int);
 
-	printf("%d개 데이터 정렬\n", n);
+	printf("%d占쏙옙 占쏙옙占쏙옙占쏙옙 占쏙옙占쏙옙\n", n);
 	shellsort(arr, n);
 	for (int i = 0; i < n; i++) {
 		printf("%4d", arr[i]);
@@ -25,5 +25,5 @@ int shellsort(int arr[], int n) {
 			}
 			arr[j] = tmp;
 		}
-	} // 문제 gap 이 5 일 때 ( 첫 번째 수행 시 ) 배열 내 숫자들의 이동상황을 적으시오
+	}
 }

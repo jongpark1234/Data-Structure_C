@@ -1,6 +1,6 @@
 #include <stdio.h>
 #define N 10
-long combi(int, int); // 수학에서 조합
+long combi(int, int);
 
 int main() {
 	int n, r, t;

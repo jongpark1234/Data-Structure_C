@@ -6,9 +6,9 @@
 #define TRUE 1
 #define FALSE 0
 
-typedef int LData; // 리스트 데이터
+typedef int LData; 
 typedef struct _n {
-	LData data; // int data;
+	LData data;
 }Node;
 
 typedef struct _linked {

@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "¿¬°á¸®½ºÆ®.h"
+#include "ï¿½ï¿½ï¿½á¸®ï¿½ï¿½Æ®.h"
 
 int MySort(int n1, int n2) {
 	if (n1 < n2) 
@@ -20,7 +20,7 @@ int main()
 	LInsert(&list, 3);	LInsort(&list, 1);
 	LInsert(&list, 7);	LInsort(&list, 6);
 
-	printf("ÇöÀç µ¥ÀÌÅÍÀÇ ¼ö : %d\n", LCount(&list));
+	printf("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ : %d\n", LCount(&list));
 
 	if (LFirst(&list, &data)) {
 		printf("%d ", data);
@@ -39,7 +39,7 @@ int main()
 		}
 	}
 
-	printf("ÇöÀç µ¥ÀÌÅÍÀÇ ¼ö : %d\n", LCount(&list));
+	printf("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ : %d\n", LCount(&list));
 
 	if (LFirst(&list, &data)) {
 		printf("%d ", data);

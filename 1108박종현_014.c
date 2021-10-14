@@ -4,22 +4,22 @@
 int queue[5];
 void menuf()
 {
-	printf("\n1.Å¥¿¡ »ðÀÔ\t2.Å¥¿¡¼­ »èÁ¦\t3.³»¿ë º¸±â\t4.Á¾·á\n\n");
+	printf("\n1.Å¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½\t2.Å¥ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½\t3.ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½\t4.ï¿½ï¿½ï¿½ï¿½\n\n");
 }
 
-void Enqueue(int* back, int item) { // Å¥¿¡ »ðÀÔ
+void Enqueue(int* back, int item) {
 	if (*back == 4)
 	{
-		printf("\nÅ¥°¡ °¡µæ Âü ! \n");
+		printf("\nÅ¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ! \n");
 		return;
 	}
 	queue[++ * back] = item;
 }
 
-int Dequeue(int* front, int back) { // Å¥¿¡¼­ »èÁ¦
-	if (*front == back) { // Å¥°¡ ºñ¾úÀ» ½Ã
-		return -1; // -1ÀÌ¸é Å¥°¡ ºñ¾ú´Ù°í »ý°¢
-		//º¸Åë 0ÀÌ ¸®ÅÏµÇ¸é Á¤»óÀûÀÎ Á¾·á
+int Dequeue(int* front, int back) { 
+	if (*front == back) { 
+		return -1; 
+		
 	}
 
 	return queue[++ * front];
@@ -28,7 +28,7 @@ int Dequeue(int* front, int back) { // Å¥¿¡¼­ »èÁ¦
 void Display(int front, int back)
 {
 	if (back == -1) {
-		printf("\nÅ¥°¡ ºñ¾úÀ½ ! \n");
+		printf("\nÅ¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ! \n");
 	}
 	else {
 		printf("\n");
@@ -57,18 +57,18 @@ main()
 		case 2:
 			item = Dequeue(&front, back);
 			if (item == -1)
-				printf("\nÅ¥°¡ ºñ¾úÀ½\n");
+				printf("\nÅ¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½\n");
 			else
-				printf("\n%d(ÀÌ)°¡ »èÁ¦µÊ\n", item);
+				printf("\n%d(ï¿½ï¿½)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n", item);
 			break;
 		case 3:
 			Display(front, back);
 			break;
 		case 4:
-			printf("\nÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.\n");
+			printf("\nï¿½ï¿½ï¿½Î±×·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.\n");
 			return 0;
 		default:
-			printf("\n´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.\n");
+			printf("\nï¿½Ù½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.\n");
 		}
 	}
 }

@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "연결리스트.h"
+#include "占쏙옙占써리占쏙옙트.h"
 
 
 void ListInit(List* plist) {
-	//리스트 초기화, Dummy Node 생성
 	plist->head = (Node*)malloc(sizeof(Node));
 	plist->head->next = NULL;
 	plist->comp = NULL;
@@ -17,7 +16,7 @@ void FInsert(List* plist, LData data) {
 	Node* newNode = (Node*)malloc(sizeof(Node));
 	newNode->data = data;
 	newNode->next = plist->head->next;
-	//plist->head 더미 노드
+	//plist->head 
 	plist->head->next = newNode;
 	(plist->numOfData)++;
 }
@@ -30,7 +29,6 @@ void SInsert(List* plist, LData data) {
 	newNode->data = data;
 	while (pred->next != NULL &&
 		plist->comp(data, pred->next->data) != 0) {
-		//함수포인터 리턴값은 0 또는 1, 
 		pred = pred->next;
 	}
 	newNode->next = pred->next;

@@ -1,12 +1,12 @@
 #pragma warning(disable:4996)
 #include <stdio.h>
-#define SIZE 5	// ½ºÅÃ¿¡ ³ÖÀ» ¼ö ÀÖ´Â ÃÖ´ë »çÀÌÁî
-void push(int); // ½ºÅÃ¿¡¼­ µ¥ÀÌÅÍ ÇÑ °³ »ðÀÔ
-void pop();		// ½ºÅÃ¿¡¼­ µ¥ÀÌ³Ê ÇÑ °³ »èÁ¦
-void display(); // ½ºÅÃ¿¡ ÀÖ´Â µ¥ÀÌÅÍ º¸¿©ÁÖ±â
+#define SIZE 5	
+void push(int); 
+void pop();		
+void display(); 
 
 int stack[SIZE];
-int top = -1; // ½ºÅÃ¿¡ ÀúÀåÇÒ À§Ä¡
+int top = -1; 
 
 main()
 {
@@ -21,21 +21,21 @@ main()
 		scanf("%d", &choice);
 
 		switch (choice) {
-		case 1: // ½ºÅÃ¿¡ push
-			printf("\nµ¥ÀÌÅÍ ÀÔ·Â : ");
+		case 1: 
+			printf("\nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ : ");
 			scanf("%d", &val);
 			push(val);
 			break;
-		case 2: // ½ºÅÃ¿¡¼­ pop
+		case 2: 
 			pop();
 			break;
-		case 3: // ½ºÅÃ ³»¿ë display
+		case 3: 
 			display();
 			break;
-		case 4: // ÇÁ·Î±×·¥ Á¾·á exit
+		case 4: 
 			return 0;
 		default:
-			printf("\n´Ù½Ã ÀÔ·ÂÇÏ¼¼¿ä.\n");
+			printf("\nï¿½Ù½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.\n");
 		}
 	}
 
@@ -44,8 +44,8 @@ main()
 
 void push(int val)
 {
-	if (top == SIZE - 1) // top >= SIZE - 1
-		printf("\n½ºÅÃÀÌ °¡µæ Âü!\n");
+	if (top == SIZE - 1) 
+		printf("\nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½!\n");
 	else
 		stack[++top] = val;
 }
@@ -53,16 +53,16 @@ void push(int val)
 void pop()
 {
 	if (top == -1)
-		printf("\n½ºÅÃÀÌ ºñ¾úÀ½!\n");
+		printf("\nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½!\n");
 	else {
-		printf("\n%d ÀÌ(°¡) »èÁ¦µÇ¾ú½À´Ï´Ù.\n", stack[top--]);
+		printf("\n%d ï¿½ï¿½(ï¿½ï¿½) ï¿½ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.\n", stack[top--]);
 	}
 }
 
 void display()
 {
 	if (top == -1)
-		printf("\n½ºÅÃÀÌ ºñ¾úÀ½!\n");
+		printf("\nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½!\n");
 	else
 		printf("\nDIsplay : ");
 	for (int i = top; i >= 0; i--)

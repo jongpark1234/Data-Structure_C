@@ -1,34 +1,33 @@
 #pragma warning(disable:4996)
 #include <stdio.h>
 #include <stdlib.h>
-// ÀÌºÐ Å½»ö, ÀÌÁø Å½»ö : Á¤·ÄµÈ ¹è¿­ ¼Ó µ¥ÀÌÅÍ Ã£±â
 
 int arr[100] = { 5, 7, 33, 66, 67, 88, 99, 120, 134, 156, 201 };
-int n, k; // k´Â ³»°¡ Ã£À» ¼ýÀÚ
+int n, k; 
 
-int binarysearch(int s, int e, int* cnt) { // start end
+int binarysearch(int s, int e, int* cnt) { 
 	while (s <= e) {
 		*cnt += 1;
-		int m = (s + e) / 2; // m Àº middle
+		int m = (s + e) / 2; 
 		if (arr[m] == k)
-			return m; // Ã£Àº ¹è¿­ÀÇ ÀÎµ¦½º ( À§Ä¡ )
+			return m; 
 		if (arr[m] > k)
 			e = m - 1;
 		else
 			s = m + 1;
 	}
 
-	return -1; // °á±¹ ¼ýÀÚ¸¦ ¸ø Ã£À½
+	return -1; 
 }
 
 main() {
 	int count = 0, value;
-	printf("Ã£À» ¼ýÀÚ ÀÔ·Â : ");
+	printf("Ã£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ : ");
 	scanf("%d", &k);
 	value = binarysearch(0, 10, &count) + 1;
-	printf("%d¹øÂ°¸¸¿¡\n", count);
+	printf("%dï¿½ï¿½Â°ï¿½ï¿½ï¿½ï¿½\n", count);
 	if (value == 0)
-		printf("¸øÃ£¾Ò½À´Ï´Ù.");
+		printf("ï¿½ï¿½Ã£ï¿½Ò½ï¿½ï¿½Ï´ï¿½.");
 	else
-		printf("%d¹ø À§Ä¡¿¡¼­ ¹ß°ß\n", value);
+		printf("%dï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½\n", value);
 }
